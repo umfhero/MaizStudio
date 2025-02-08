@@ -1,0 +1,404 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+a {
+    color: #fcd24d;
+    /* Yellow highlight color for links */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+a:hover {
+    color: #ffb700;
+    /* Slightly darker yellow on hover */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    /* Adjust logo height as needed */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    width: 200px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #fcd24d;
+    /* Yellow highlight color */
+    border: none;
+    border-radius: 3px;
+    color: #1a1a1a;
+    /* Dark text for contrast */
+    cursor: pointer;
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2a2a2a;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: none;
+    /* Hidden by default */
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #444;
+}
+
+.suggestion-icon {
+    width: 30px;
+    /* Small size for the icon */
+    height: 30px;
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-right: 10px;
+    /* Space between icon and text */
+    object-fit: cover;
+    /* Ensure the image fits nicely */
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #fcd24d;
+    /* Yellow highlight color */
+    font-weight: 700;
+}
+
+/* Cover Section */
+.cover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    position: relative;
+}
+
+.cover-image {
+    position: relative;
+    height: 500px;
+    /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.cover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay */
+}
+
+.cover-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.cover-content h1 {
+    font-size: 3.5em;
+    margin: 0;
+    color: #fcd24d;
+    /* Yellow highlight color */
+}
+
+.cover-content .developer {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.cover-content .game-actions {
+    margin: 20px 0;
+}
+
+.cover-content .btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #fcd24d;
+    /* Yellow highlight color */
+    border: none;
+    border-radius: 5px;
+    color: #1a1a1a;
+    /* Dark text for contrast */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cover-content .btn:hover {
+    background-color: #ffb700;
+    /* Slightly darker yellow on hover */
+}
+
+.cover-content .game-info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.cover-content .game-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Roadmap Section */
+.roadmap {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.roadmap-years {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.year-button {
+    padding: 10px 20px;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.year-button.active {
+    background-color: #fcd24d;
+    /* Yellow highlight color */
+    color: #1a1a1a;
+    /* Dark text for contrast */
+}
+
+.year-button:hover {
+    background-color: #444;
+}
+
+.roadmap-quarters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.quarter {
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.quarter:hover {
+    transform: scale(1.05);
+}
+
+.quarter h4 {
+    font-size: 1.2em;
+    margin: 0 0 5px;
+    color: #fcd24d;
+    /* Yellow highlight color */
+}
+
+.quarter p {
+    font-size: 0.9em;
+    margin: 0;
+    color: #ccc;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    /* Blurred background */
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.popup-content h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #fcd24d;
+    /* Yellow highlight color */
+}
+
+.popup-content p {
+    font-size: 1em;
+    margin: 0 0 20px;
+    color: #ccc;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    background-color: #fcd24d;
+    /* Yellow highlight color */
+    border: none;
+    border-radius: 5px;
+    color: #1a1a1a;
+    /* Dark text for contrast */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+    background-color: #ffb700;
+    /* Slightly darker yellow on hover */
+}
+/* Media Carousel Section */
+.media-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+
+
+/* Reviews Section */
+.reviews-content {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}

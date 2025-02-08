@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game 1 - Maiz Studio</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
-    <link rel="stylesheet" href="/game1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="/media/MaizLogo.png" alt="Maiz Studio Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -18,26 +21,30 @@
             </ul>
         </nav>
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchGames()">Search</button>
+            <div id="suggestions" class="suggestions"></div>
         </div>
     </header>
 
     <section id="game-details">
-        <div class="game-cover">
-            <img src="/media/Gamepic1.png" alt="Game 1 Cover">
-            <div class="game-overlay">
+        <div class="cover-grid">
+            <div class="cover-image">
+                <img src="/media/Gamepic1.png" alt="Game 1 Cover">
+                <div class="cover-overlay"></div>
+            </div>
+            <div class="cover-content">
                 <h1>Game 1</h1>
                 <p class="developer">Maiz Studio</p>
-                <div class="rating">
-                    <span class="stars">★★★★☆</span>
-                    <span class="score">4.50</span>
-                    <span class="reviews">(17.2K reviews)</span>
-                </div>
-                <p class="price">$19.99</p>
                 <div class="game-actions">
-                    <a href="#" class="btn">Add to Cart</a>
-                    <a href="#" class="btn">Game Trial</a>
+                    <button class="btn">🎮 Add to Cart</button>
+                    <button class="btn">❤️ Follow</button>
+                </div>
+                <div class="game-info">
+                    <p>📅 Release Date: 20/08/2024</p>
+                    <p>👥 Players: 1</p>
+                    <p>🎮 Platform: PS5, PC</p>
+                    <p>⚠️ Content: Drops, Sound, Violence</p>
                 </div>
             </div>
         </div>
@@ -45,21 +52,72 @@
 
     <section id="media">
         <h2>Media</h2>
-        <div class="media-grid">
-            <img src="/media/Gamepic1.png" alt="Media 1">
-            <img src="/media/Gamepic2.jpg" alt="Media 2">
-            <img src="/media/Gamepic3.jpg" alt="Media 3">
-            <img src="/media/Gamepic4.jpg" alt="Media 4">
+        <div class="media-carousel">
+            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="/media/Gamepic1.png" alt="Media 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/media/Gamepic2.jpg" alt="Media 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/media/Gamepic3.jpg" alt="Media 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/media/Gamepic4.jpg" alt="Media 4">
+                </div>
+            </div>
+            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
 
     <section id="roadmap">
         <h2>Roadmap</h2>
-        <div class="roadmap-content">
-            <!-- Insert your roadmap graphic or content here -->
-            <img src="/media/roadmap.png" alt="Roadmap">
+        <div class="roadmap">
+            <div class="roadmap-years">
+                <button class="year-button active" onclick="showYear(2025)">2025</button>
+                <button class="year-button" onclick="showYear(2026)">2026</button>
+            </div>
+            <div class="roadmap-quarters" id="roadmap-2025">
+                <div class="quarter" onclick="showPopup('Pre Alpha-O Release', 'Details about Pre Alpha-O Release. lorem ipsum dolor sit amet.')">
+                    <h4>Q1</h4>
+                    <p>Pre Alpha-O Release</p>
+                </div>
+                <div class="quarter" onclick="showPopup('Pre Alpha-I Release', 'Details about Pre Alpha-I Release. lorem ipsum dolor sit amet.')">
+                    <h4>Q2</h4>
+                    <p>Pre Alpha-I Release</p>
+                </div>
+                <div class="quarter" onclick="showPopup('Pre Alpha-II Release', 'Details about Pre Alpha-II Release. lorem ipsum dolor sit amet.')">
+                    <h4>Q3</h4>
+                    <p>Pre Alpha-II Release</p>
+                </div>
+                <div class="quarter" onclick="showPopup('Alpha-O Release', 'Details about Alpha-O Release. lorem ipsum dolor sit amet.')">
+                    <h4>Q4</h4>
+                    <p>Alpha-O Release</p>
+                </div>
+            </div>
+            <div class="roadmap-quarters" id="roadmap-2026" style="display: none;">
+                <div class="quarter" onclick="showPopup('Beta Testing', 'Details about Beta Testing. lorem ipsum dolor sit amet.')">
+                    <h4>Q1</h4>
+                    <p>Beta Testing</p>
+                </div>
+                <div class="quarter" onclick="showPopup('Final Release', 'Details about Final Release. lorem ipsum dolor sit amet.')">
+                    <h4>Q2</h4>
+                    <p>Final Release</p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Popup Overlay -->
+    <div id="popup-overlay" class="popup-overlay">
+        <div class="popup-content">
+            <h3 id="popup-title"></h3>
+            <p id="popup-details"></p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
 
     <section id="reviews">
         <h2>Reviews</h2>

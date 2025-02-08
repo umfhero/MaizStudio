@@ -1,11 +1,22 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    /* Modern font for everything */
     margin: 0;
     padding: 0;
     background-color: #1a1a1a;
     color: #ffffff;
+}
+
+a {
+    color: #fcd24d;
+    /* Yellow highlight color for links */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+a:hover {
+    color: #ffb700;
+    /* Slightly darker yellow on hover */
 }
 
 header {
@@ -15,6 +26,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    /* Adjust logo height as needed */
 }
 
 nav ul {
@@ -32,27 +48,56 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    /* Semi-bold for links */
 }
-
+/* Search Bar and Suggestions */
 .search-bar {
+    position: relative;
     display: flex;
+    align-items: center;
 }
 
-.search-bar input {
+#searchInput {
     padding: 5px;
     border: none;
     border-radius: 3px;
+    width: 200px;
 }
 
-.search-bar button {
-    padding: 5px 10px;
-    margin-left: 5px;
-    background-color: #ff6f61;
-    border: none;
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2a2a2a;
     border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: none;
+    /* Hidden by default */
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
     color: #fff;
     cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #444;
+}
+
+.suggestion-icon {
+    width: 30px;
+    /* Small size for the icon */
+    height: 30px;
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-right: 10px;
+    /* Space between icon and text */
+    object-fit: cover;
+    /* Ensure the image fits nicely */
 }
 
 section {
@@ -63,10 +108,45 @@ section {
 h1,
 h2 {
     font-family: 'Poppins', sans-serif;
-    /* Consistent modern font */
-    color: #ff6f61;
+    color: #fcd24d;
+    /* Yellow highlight color */
     font-weight: 700;
-    /* Bold for headings */
+}
+
+/* Cover Image Section */
+.cover-image {
+    position: relative;
+    height: 400px;
+    /* Reduced height */
+    overflow: hidden;
+}
+
+.cover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    /* Fade effect */
+}
+
+.cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.cover-text h1 {
+    font-size: 3.5em;
+    /* Larger welcome text */
+    margin: 0;
+}
+
+.cover-text p {
+    font-size: 1.5em;
+    /* Larger subtitle text */
+    margin: 10px 0 0;
 }
 
 /* Games List Section */
@@ -85,6 +165,9 @@ h2 {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    text-decoration: none;
+    display: block;
+    color: inherit;
 }
 
 .game-tile:hover {
@@ -94,7 +177,6 @@ h2 {
 .game-tile img {
     width: 100%;
     height: 200px;
-    /* Fixed height for uniformity */
     object-fit: cover;
 }
 
@@ -107,7 +189,8 @@ h2 {
 .game-info h3 {
     margin: 0 0 10px;
     font-size: 1.5em;
-    color: #ff6f61;
+    color: #fcd24d;
+    /* Yellow highlight color */
 }
 
 .game-info p {
@@ -119,8 +202,10 @@ h2 {
 .game-info .btn {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #ff6f61;
-    color: #fff;
+    background-color: #fcd24d;
+    /* Yellow highlight color */
+    color: #1a1a1a;
+    /* Dark text for contrast */
     text-decoration: none;
     border-radius: 3px;
     font-size: 0.9em;
@@ -144,7 +229,8 @@ h2 {
 .news-grid h3 {
     margin: 0 0 10px;
     font-size: 1.2em;
-    color: #ff6f61;
+    color: #fcd24d;
+    /* Yellow highlight color */
 }
 
 .news-grid p {
@@ -159,10 +245,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    /* Increased padding for more space */
     position: relative;
-    /* Changed from fixed to relative */
     width: 100%;
     margin-top: 40px;
-    /* Added margin to prevent overlap */
 }

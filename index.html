@@ -9,6 +9,9 @@
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="/media/MaizLogo.png" alt="Maiz Studio Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -18,52 +21,57 @@
             </ul>
         </nav>
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchGames()">Search</button>
+            <div id="suggestions" class="suggestions"></div>
         </div>
     </header>
 
     <section id="home">
-        <h1>Welcome to Maiz Studio</h1>
-        <p>Your destination for immersive gaming experiences.</p>
-        <img src="/media/Gamepic.jpeg" alt="Maiz Studio Banner">
+        <div class="cover-image">
+            <img src="/media/Gamepic.jpeg" alt="Maiz Studio Banner">
+            <div class="cover-text">
+                <h1>Welcome to Maiz Studio</h1>
+                <p>Your destination for immersive gaming experiences.</p>
+            </div>
+        </div>
     </section>
 
     <section id="games">
         <h2>Our Games</h2>
         <div class="game-grid">
-            <div class="game-tile">
+            <a href="game1.html" class="game-tile">
                 <img src="/media/Gamepic1.png" alt="Game 1">
                 <div class="game-info">
                     <h3>Game 1</h3>
                     <p>Join machine hunter Amy as she leads a colorful crew of heroes through the lush wilderness in a quest to see the world and learn the secrets of her past.</p>
-                    <a href="game1.html" class="btn">Learn More</a>
+                    <span class="btn">Learn More</span>
                 </div>
-            </div>
-            <div class="game-tile">
+            </a>
+            <a href="game2.html" class="game-tile">
                 <img src="/media/Gamepic2.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game 2</h3>
                     <p>Embark on an epic adventure in a world filled with mystery, danger, and excitement.</p>
-                    <a href="game2.html" class="btn">Learn More</a>
+                    <span class="btn">Learn More</span>
                 </div>
-            </div>
-            <div class="game-tile">
+            </a>
+            <a href="game3.html" class="game-tile">
                 <img src="/media/Gamepic3.jpg" alt="Game 3">
                 <div class="game-info">
                     <h3>Game 3</h3>
                     <p>Explore a vibrant universe where every decision shapes your destiny.</p>
-                    <a href="game3.html" class="btn">Learn More</a>
+                    <span class="btn">Learn More</span>
                 </div>
-            </div>
-            <div class="game-tile">
+            </a>
+            <a href="game4.html" class="game-tile">
                 <img src="/media/Gamepic4.jpg" alt="Game 4">
                 <div class="game-info">
                     <h3>Game 4</h3>
                     <p>Dive into a thrilling story-driven experience with unforgettable characters.</p>
-                    <a href="game4.html" class="btn">Learn More</a>
+                    <span class="btn">Learn More</span>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
