@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Modern font for everything */
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    /* Semi-bold for links */
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    /* Consistent modern font */
+    color: #ff6f61;
+    font-weight: 700;
+    /* Bold for headings */
+}
+
+/* Games List Section */
+.game-grid {
+    max-width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.game-tile {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.game-tile:hover {
+    transform: scale(1.05);
+}
+
+.game-tile img {
+    width: 100%;
+    height: 200px;
+    /* Fixed height for uniformity */
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 15px;
+    color: #fff;
+    text-align: left;
+}
+
+.game-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #ff6f61;
+}
+
+.game-info p {
+    margin: 0 0 10px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.game-info .btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* News Section */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.news-grid article {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+}
+
+.news-grid h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: #ff6f61;
+}
+
+.news-grid p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    /* Increased padding for more space */
+    position: relative;
+    /* Changed from fixed to relative */
+    width: 100%;
+    margin-top: 40px;
+    /* Added margin to prevent overlap */
+}

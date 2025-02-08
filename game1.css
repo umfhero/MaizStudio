@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: #ff6f61;
+}
+
+/* Game Cover Section */
+.game-cover {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.game-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+    padding: 20px;
+    color: #fff;
+    text-align: left;
+}
+
+.game-overlay h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.game-overlay .developer {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+.game-overlay .rating {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.game-overlay .rating .stars {
+    color: #ffd700;
+}
+
+.game-overlay .rating .score {
+    font-weight: 600;
+}
+
+.game-overlay .rating .reviews {
+    color: #ccc;
+}
+
+.game-overlay .price {
+    margin: 10px 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #ff6f61;
+}
+
+.game-overlay .game-actions {
+    margin-top: 15px;
+}
+
+.game-overlay .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.game-overlay .btn:hover {
+    background-color: #e65a50;
+}
+
+/* Media Section */
+.media-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.media-grid img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Roadmap Section */
+.roadmap-content img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+/* Reviews Section */
+.reviews-content {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
